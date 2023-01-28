@@ -7,6 +7,14 @@ All projects are published in my github packages repo
 repositories {
     maven { url "https://maven.pkg.github.com/skiedrowski/sktooling" }
 }
+
+dependencies {
+    implementation "com.github.skiedrowski.tools.sktooling:kotlin-tools:$ver.rest_tools"
+    implementation "com.github.skiedrowski.tools.sktooling:cdi-properties:$ver.rest_tools"
+    implementation "com.github.skiedrowski.tools.sktooling:rest-authentication:$ver.rest_tools"
+    implementation "com.github.skiedrowski.tools.sktooling:rest-exceptionmapper:$ver.rest_tools"
+}
+
 ```
 # [Kotlin Tools](kotlin-tools/Readme.md)
 Written in Kotlin but usable in any JVM language
@@ -17,3 +25,5 @@ Allows injecting properties files into CDI Beans
 # [REST Exceptionmapper](rest-exceptionmapper)
 Defines commonly used exception mappers for REST Resources
 
+# [REST Authentication](rest-authentication)
+Easy integration of REST Authentication into JAX-RS
