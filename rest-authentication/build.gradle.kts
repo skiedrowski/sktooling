@@ -11,6 +11,9 @@ dependencies {
     compileOnly(Deps.j_annotation_api)
     compileOnly(Deps.j_xml_bind_api)
 
-    //provides several implementations of apis with compileOnly dependencies
-    testFixturesApi(Deps.payara_embedded)
+    testFixturesApi(Deps.j_cdi_api)
+    testFixturesApi(Deps.j_ws_rs_api)
+    testFixturesApi(Deps.j_annotation_api)
+    testFixturesApi(Deps.j_xml_bind_api)
+    testFixturesApi(Deps.jersey_common)
 }

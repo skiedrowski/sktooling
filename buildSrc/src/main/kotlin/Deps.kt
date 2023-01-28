@@ -10,7 +10,9 @@ object Ver {
     const val junit = "5.9.2"
     const val mockk = "1.13.4"
     const val kotest_assertions = "5.5.4"
-    const val payara = "6.2023.1"
+
+    const val yasson = "3.0.2"
+    const val jersey = "3.1.0"
 }
 
 object Deps {
@@ -21,11 +23,13 @@ object Deps {
     const val j_annotation_api = "jakarta.annotation:jakarta.annotation-api:${Ver.j_annotation_api}"
     const val j_xml_bind_api = "jakarta.xml.bind:jakarta.xml.bind-api:${Ver.j_xml_bind_api}"
 
+    //test
     const val junit = "org.junit.jupiter:junit-jupiter-api:${Ver.junit}"
     const val junit_engine = "org.junit.jupiter:junit-jupiter-engine:${Ver.junit}"
 
     const val mockk = "io.mockk:mockk:${Ver.mockk}"
     const val kotest_assertions = "io.kotest:kotest-assertions-core:${Ver.kotest_assertions}"
 
-    const val payara_embedded = "fish.payara.extras:payara-embedded-all:${Ver.payara}"
+    const val yasson = "org.eclipse:yasson:${Ver.yasson}"
+    const val jersey_common = "org.glassfish.jersey.core:jersey-common:${Ver.jersey}"
 }
