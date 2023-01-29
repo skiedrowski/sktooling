@@ -9,10 +9,10 @@ repositories {
 }
 
 dependencies {
-    implementation "com.github.skiedrowski.tools.sktooling:kotlin-tools:$ver.rest_tools"
-    implementation "com.github.skiedrowski.tools.sktooling:cdi-properties:$ver.rest_tools"
-    implementation "com.github.skiedrowski.tools.sktooling:rest-authentication:$ver.rest_tools"
-    implementation "com.github.skiedrowski.tools.sktooling:rest-exceptionmapper:$ver.rest_tools"
+    implementation "com.github.skiedrowski.tools.sktooling:kotlin-tools:$ver.kotlin_toole"
+    implementation "com.github.skiedrowski.tools.sktooling:cdi-properties:$ver.cdi_properties"
+    implementation "com.github.skiedrowski.tools.sktooling:rest-authentication:$ver.rest_authentication"
+    implementation "com.github.skiedrowski.tools.sktooling:rest-exceptionmapper:$ver.rest_exceptionmapper"
 }
 
 ```
