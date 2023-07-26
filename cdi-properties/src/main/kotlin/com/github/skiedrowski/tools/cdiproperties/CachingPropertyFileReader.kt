@@ -35,6 +35,7 @@ class CachingPropertyFileReader {
             logger.log(Level.SEVERE,
                     "could not load properties file from $fullFilename. user.dir is ${System.getProperty("user.dir")}",
                     fnfe)
+            throw fnfe
         }
         propertiesMap[filename] = properties
         return properties
