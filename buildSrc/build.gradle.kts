@@ -8,7 +8,7 @@ plugins {
 
 dependencies {
     //cannot use Deps here
-    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.0") //version must match Deps.kotlin
-    implementation("org.jetbrains.kotlin:kotlin-noarg:1.8.0") //version must match Deps.kotlin
-    implementation("org.jetbrains.kotlin:kotlin-allopen:1.8.0") //version must match Deps.kotlin
+    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:2.2.20") //version must match Deps.kotlin
+    implementation("org.jetbrains.kotlin:kotlin-noarg:2.2.20") //version must match Deps.kotlin
+    implementation("org.jetbrains.kotlin:kotlin-allopen:2.2.20") //version must match Deps.kotlin
 }

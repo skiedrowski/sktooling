@@ -1,4 +1,4 @@
-A number of opinonated helper projects.
+A number of opinionated helper projects.
 
 # Publishing
 All projects are published in my github packages repo

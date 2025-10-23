@@ -1,5 +1,5 @@
 plugins {
-    id("prj")
+    id("prj.base")
 }
 
 dependencies {

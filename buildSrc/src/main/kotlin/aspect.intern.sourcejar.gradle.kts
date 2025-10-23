@@ -1,7 +1,7 @@
 val sourceJar: Configuration by configurations.creating
 
-// custom task for creating a sources jar
-val sourcesJarTask = task<Jar>("sourcesJar") {
+// custom task for creating a source jar
+val sourcesJarTask = tasks.register<Jar>("sourcesJar") {
     dependsOn(tasks.named("classes"))
     archiveClassifier.set("sources")
     from(project.the<SourceSetContainer>()["main"].allSource)

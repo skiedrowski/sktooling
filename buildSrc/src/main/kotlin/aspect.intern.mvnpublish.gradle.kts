@@ -46,6 +46,7 @@ configure<PublishingExtension> {
             val mvnPublishUrlPrefix = System.getProperty("MVN_PUBLISH_URL_PREFIX")
             val releasesRepoUrl = "$mvnPublishUrlPrefix/releases"
             val snapshotsRepoUrl = "$mvnPublishUrlPrefix/snapshots"
+//            println(project.version.toString())
             url = uri(
                 if (project.version.toString().endsWith("-SNAPSHOT")) snapshotsRepoUrl else releasesRepoUrl
             )

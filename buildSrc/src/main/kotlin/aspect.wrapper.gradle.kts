@@ -1,7 +1,4 @@
-import org.gradle.api.tasks.wrapper.Wrapper
-import org.gradle.kotlin.dsl.named
-
 tasks.named<Wrapper>("wrapper") {
-    gradleVersion = "7.6"
+    gradleVersion = "8.14.3"
     distributionType = Wrapper.DistributionType.ALL
 }

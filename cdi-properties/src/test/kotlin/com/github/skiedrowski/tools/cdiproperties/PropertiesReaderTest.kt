@@ -1,5 +1,6 @@
 package com.github.skiedrowski.tools.cdiproperties
 
+import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.types.shouldBeSameInstanceAs
 import io.mockk.every
@@ -8,6 +9,7 @@ import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import jakarta.enterprise.inject.spi.Annotated
 import jakarta.enterprise.inject.spi.InjectionPoint
+import java.io.FileNotFoundException
 
 class PropertiesReaderTest {
     private val propertiesReader = PropertiesReader(CachingPropertyFileReader())
@@ -37,12 +39,10 @@ class PropertiesReaderTest {
     }
 
     @Test
-    fun `provideProperties file nonexistant returns empty properties`() {
+    fun `provideProperties file nonexistant should throw`() {
         val ip = buildInjectionPoint("öksldfhtest.properties")
 
-        val properties = propertiesReader.provideProperties(ip)
-
-        properties.size shouldBe 0
+        shouldThrow<FileNotFoundException> { propertiesReader.provideProperties(ip) }
     }
 
     private fun buildInjectionPoint(filename: String): InjectionPoint {

@@ -2,7 +2,7 @@
 val javadocJar: Configuration by configurations.creating
 
 //custom task for creating a javadoc jar
-val javadocTask = task<Jar>("javadocJar") {
+val javadocTask = tasks.register<Jar>("javadocJar") {
     description = "Assembles a jar archive containing the javadocs of project ${project.name}"
     archiveClassifier.set("javadoc")
     dependsOn(JavaPlugin.JAVADOC_TASK_NAME)
@@ -18,6 +18,5 @@ artifacts {
 if (JavaVersion.current().isJava8Compatible) {
     tasks.withType<Javadoc>().configureEach {
         options.quiet().jFlags("Xdoclint:none")
-//        options.addStringOption('Xdoclint:none', '-quiet')
     }
 }
